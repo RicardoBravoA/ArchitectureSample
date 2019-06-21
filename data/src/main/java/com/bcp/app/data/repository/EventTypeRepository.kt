@@ -24,7 +24,5 @@ class EventTypeRepository(
             .firstElement()
             .toObservable()
     }
-
-    fun getById(id: Int): Observable<EventTypeLocalModel> = eventTypeLocalDataSource.getById(id)
 }
 

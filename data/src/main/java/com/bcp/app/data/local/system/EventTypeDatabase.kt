@@ -11,13 +11,13 @@ import com.bcp.app.data.local.util.Converters
 
 @Database(entities = [EventTypeLocalModel::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
-abstract class SystemDatabase : RoomDatabase() {
+abstract class EventTypeDatabase : RoomDatabase() {
 
     abstract fun eventTypeDao(): EventTypeDao
 
     companion object {
-        fun newInstance(context: Context): SystemDatabase {
-            return Room.databaseBuilder(context, SystemDatabase::class.java, "theatre-system.db").build()
+        fun newInstance(context: Context): EventTypeDatabase {
+            return Room.databaseBuilder(context, EventTypeDatabase::class.java, "theatre-system.db").build()
         }
     }
 }

@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/bcp/app/architecturesample/internal/injection/module/DataModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <value>
             <set />
@@ -233,6 +238,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/system/EventTypeDatabase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/system/SystemDatabase.kt">
           <value>
             <set />
@@ -394,6 +404,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/entity/Venue.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/gateway/EventTypeGateway.kt">
           <value>
             <set />
           </value>
