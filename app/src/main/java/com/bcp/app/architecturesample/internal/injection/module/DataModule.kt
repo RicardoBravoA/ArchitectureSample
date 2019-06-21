@@ -2,16 +2,16 @@ package com.bcp.app.architecturesample.internal.injection.module
 
 import android.content.Context
 import com.bcp.app.data.BuildConfig
-import com.bcp.app.data.gateway.EventTypeGatewayImpl
-import com.bcp.app.data.local.EventTypeLocalDataSource
-import com.bcp.app.data.local.dao.EventTypeDao
-import com.bcp.app.data.local.system.EventTypeDatabase
-import com.bcp.app.data.remote.EventTypeRemoteDataSource
-import com.bcp.app.data.remote.api.TheatreApi
-import com.bcp.app.data.remote.api.TheatreService
-import com.bcp.app.data.repository.EventTypeRepository
-import com.bcp.app.data.repository.mapper.EventTypeMapper
-import com.bcp.app.domain.gateway.EventTypeGateway
+import com.bcp.app.data.gateway.UserGatewayImpl
+import com.bcp.app.data.local.UserLocalDataSource
+import com.bcp.app.data.local.dao.UserDao
+import com.bcp.app.data.local.user.UserDatabase
+import com.bcp.app.data.remote.UserRemoteDataSource
+import com.bcp.app.data.remote.api.GitHubApi
+import com.bcp.app.data.remote.api.GitHubService
+import com.bcp.app.data.repository.UserRepository
+import com.bcp.app.data.repository.mapper.UserMapper
+import com.bcp.app.domain.gateway.UserGateway
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -20,42 +20,42 @@ import javax.inject.Singleton
 internal class DataModule {
     @Provides
     @Singleton
-    internal fun provideTheatreService(): TheatreService = TheatreApi(BuildConfig.API_URL)
+    internal fun provideTheatreService(): GitHubService = GitHubApi(BuildConfig.API_URL)
 
 
     @Provides
     @Singleton
-    internal fun provideEventTypeRemoteDataSource(theatreService: TheatreService): EventTypeRemoteDataSource {
-        return EventTypeRemoteDataSource(theatreService)
+    internal fun provideEventTypeRemoteDataSource(gitHubService: GitHubService): UserRemoteDataSource {
+        return UserRemoteDataSource(gitHubService)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDatabase(context: Context): EventTypeDatabase {
-        return EventTypeDatabase.newInstance(context)
+    internal fun provideEventTypeDatabase(context: Context): UserDatabase {
+        return UserDatabase.newInstance(context)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDao(eventTypeDatabase: EventTypeDatabase): EventTypeDao = eventTypeDatabase.eventTypeDao()
+    internal fun provideEventTypeDao(userDatabase: UserDatabase): UserDao = userDatabase.eventTypeDao()
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDiskDataSource(eventTypeDao: EventTypeDao): EventTypeLocalDataSource {
-        return EventTypeLocalDataSource(eventTypeDao)
+    internal fun provideEventTypeDiskDataSource(userDao: UserDao): UserLocalDataSource {
+        return UserLocalDataSource(userDao)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeLocalToRemoteRepository(eventTypeLocalDataSource: EventTypeLocalDataSource,
-                                            eventTypeRemoteDataSource: EventTypeRemoteDataSource): EventTypeRepository {
-        return EventTypeRepository(eventTypeLocalDataSource, eventTypeRemoteDataSource, EventTypeMapper())
+    internal fun provideEventTypeLocalToRemoteRepository(userLocalDataSource: UserLocalDataSource,
+                                                         userRemoteDataSource: UserRemoteDataSource): UserRepository {
+        return UserRepository(userLocalDataSource, userRemoteDataSource, UserMapper())
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeRepository(eventTypeRepository: EventTypeRepository): EventTypeGateway {
-        return EventTypeGatewayImpl(eventTypeRepository)
+    internal fun provideEventTypeRepository(userRepository: UserRepository): UserGateway {
+        return UserGatewayImpl(userRepository)
     }
 
 }

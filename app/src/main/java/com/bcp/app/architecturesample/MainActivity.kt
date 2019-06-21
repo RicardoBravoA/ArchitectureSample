@@ -8,7 +8,6 @@ import com.bcp.app.architecturesample.databinding.ActivityMainBinding
 import com.bcp.app.architecturesample.internal.util.lazyThreadSafetyNone
 import dagger.android.support.DaggerAppCompatActivity
 
-import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
 class MainActivity : DaggerAppCompatActivity() {
@@ -22,7 +21,7 @@ class MainActivity : DaggerAppCompatActivity() {
     }
 
     private val viewModel by lazyThreadSafetyNone {
-        ViewModelProviders.of(this, viewModelFactory).get(EventViewModel::class.java)
+        ViewModelProviders.of(this, viewModelFactory).get(UserViewModel::class.java)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,7 @@ class MainActivity : DaggerAppCompatActivity() {
         setSupportActionBar(binder.toolbar)
 
         binder.viewModel = viewModel
-        viewModel.loadEventTypeList()
+        viewModel.loadUser()
 
     }
 

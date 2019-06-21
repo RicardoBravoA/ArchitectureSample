@@ -33,8 +33,6 @@ ext {
     rxAndroidVersion = '2.0.+'
     retrofitVersion = '2.3.+'
     okHttpVersion = '3.9.+'
-    moshiVersion = '1.5.+'
-    moshiLazyAdapterVersion = '2.1'
     lifecycleVersion = '1.1.0'
     roomVersion = '1.1.0-alpha2'
     constraintLayoutVersion = '1.0.+'
@@ -112,10 +110,8 @@ ext {
             "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
             "com.squareup.retrofit2:retrofit:$retrofitVersion",
             "com.squareup.okhttp3:logging-interceptor:$okHttpVersion",
-            "com.squareup.retrofit2:converter-moshi:$retrofitVersion",
+            "com.squareup.retrofit2:converter-gson:$retrofitVersion",
             "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
-            "com.squareup.moshi:moshi-kotlin:$moshiVersion",
-            "com.serjltt.moshi:moshi-lazy-adapters:$moshiLazyAdapterVersion",
             "android.arch.persistence.room:runtime:$roomVersion",
             "android.arch.persistence.room:rxjava2:$roomVersion"
     ]

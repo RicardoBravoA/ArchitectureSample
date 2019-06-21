@@ -33,6 +33,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/bcp/app/architecturesample/UserViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/bcp/app/architecturesample/app/App.kt">
           <value>
             <set />
@@ -128,6 +133,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/build/tmp/kapt3/stubs/debug/com/bcp/app/data/remote/model/UserRemoteModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/gateway/EventTypeGatewayImpl.kt">
           <value>
             <set />
@@ -148,6 +163,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/gateway/UserGatewayImpl.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/gateway/mapper/EventTypeMapper.kt">
           <value>
             <set />
@@ -163,6 +183,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/gateway/mapper/UserMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/EventLocalDataSource.kt">
           <value>
             <set />
@@ -174,6 +199,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/RatingLocalDataSource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/UserLocalDataSource.kt">
           <value>
             <set />
           </value>
@@ -198,7 +228,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/dao/UserDao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/dao/VenueDao.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/eventtype/UserDatabase.kt">
           <value>
             <set />
           </value>
@@ -233,6 +273,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/model/UserLocalModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/model/VenueLocalModel.kt">
           <value>
             <set />
@@ -244,6 +289,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/system/SystemDatabase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/local/user/UserDatabase.kt">
           <value>
             <set />
           </value>
@@ -268,7 +318,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/UserRemoteDataSource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/VenueRemoteDataSource.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/api/GitHubApi.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/api/GitHubService.kt">
           <value>
             <set />
           </value>
@@ -318,6 +383,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/model/UserRemoteModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/remote/model/VenueRemoteModel.kt">
           <value>
             <set />
@@ -338,6 +408,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/repository/UserRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/repository/VenueRepository.kt">
           <value>
             <set />
@@ -354,6 +429,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/repository/mapper/RatingMapper.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/repository/mapper/UserMapper.kt">
           <value>
             <set />
           </value>
@@ -403,6 +483,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/entity/UserEntity.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/entity/Venue.kt">
           <value>
             <set />
@@ -423,6 +508,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/gateway/UserGateway.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/interactor/EventFindByTypeUseCase.kt">
           <value>
             <set />
@@ -439,6 +529,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/interactor/RatingFindByEventUseCase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/interactor/UserGetAllUseCase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/interactor/UserUseCase.kt">
           <value>
             <set />
           </value>
