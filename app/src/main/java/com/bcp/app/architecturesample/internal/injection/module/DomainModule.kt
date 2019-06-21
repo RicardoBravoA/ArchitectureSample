@@ -29,15 +29,4 @@ internal class DomainModule {
         return EventGetByIdUseCase(schedulers, inventoryGateway)
     }
 
-    @Provides
-    @Singleton
-    internal fun provideVenueGetByIdUseCase(schedulers: Schedulers, inventoryGateway: InventoryGateway): VenueGetByIdUseCase {
-        return VenueGetByIdUseCase(schedulers, inventoryGateway)
-    }
-
-    @Provides
-    @Singleton
-    internal fun provideRatingFindByEventUseCase(schedulers: Schedulers, inventoryGateway: InventoryGateway): RatingFindByEventUseCase {
-        return RatingFindByEventUseCase(schedulers, inventoryGateway)
-    }
 }

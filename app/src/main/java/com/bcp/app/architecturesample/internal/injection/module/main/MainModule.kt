@@ -37,8 +37,7 @@ internal abstract class MainModule {
         @Provides
         @JvmStatic
         internal fun provideViewModelFactory(context: Context,
-                                             eventTypeGetAllUseCase: EventTypeGetAllUseCase,
-                                             eventFindByTypeUseCase: EventFindByTypeUseCase): ViewModelProvider.Factory {
+                                             eventTypeGetAllUseCase: EventTypeGetAllUseCase): ViewModelProvider.Factory {
             return object : ViewModelProvider.Factory {
                 @Suppress("UNCHECKED_CAST")
                 override fun <T : ViewModel?> create(modelClass: Class<T>): T {

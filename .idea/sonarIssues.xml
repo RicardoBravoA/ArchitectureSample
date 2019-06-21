@@ -118,6 +118,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/data/build/tmp/kapt3/stubs/debug/com/bcp/app/data/local/model/ReviewLocalModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/data/src/main/java/com/bcp/app/data/gateway/EventTypeGatewayImpl.kt">
           <value>
             <set />
