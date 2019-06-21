@@ -6,9 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bcp.app.architecturesample.EventViewModel
 import com.bcp.app.architecturesample.internal.injection.scope.MainScope
 import com.bcp.app.domain.Schedulers
-import com.bcp.app.domain.gateway.InventoryGateway
 import com.bcp.app.domain.gateway.SystemGateway
-import com.bcp.app.domain.interactor.EventFindByTypeUseCase
 import com.bcp.app.domain.interactor.EventTypeGetAllUseCase
 import dagger.Module
 import dagger.Provides
@@ -24,13 +22,6 @@ internal abstract class MainModule {
         @JvmStatic
         internal fun provideEventTypeGetAllUseCase(schedulers: Schedulers, systemGateway: SystemGateway): EventTypeGetAllUseCase {
             return EventTypeGetAllUseCase(schedulers, systemGateway)
-        }
-
-        @MainScope
-        @Provides
-        @JvmStatic
-        internal fun provideEventFindByTypeUseCase(schedulers: Schedulers, inventoryGateway: InventoryGateway): EventFindByTypeUseCase {
-            return EventFindByTypeUseCase(schedulers, inventoryGateway)
         }
 
         @MainScope

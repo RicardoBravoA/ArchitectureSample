@@ -4,7 +4,6 @@ import com.bcp.app.data.BuildConfig
 import com.bcp.app.data.remote.api.util.AuthenticatorInterceptor
 import com.bcp.app.data.remote.api.util.MoshiConverters
 import com.bcp.app.data.remote.api.util.RetryAfterInterceptor
-import com.bcp.app.data.remote.model.EventRemoteModel
 import com.bcp.app.data.remote.model.EventTypeRemoteModel
 import com.serjltt.moshi.adapters.Wrapped
 import com.squareup.moshi.KotlinJsonAdapterFactory
@@ -54,9 +53,5 @@ class TheatreApi(baseUrl: String) : TheatreService {
     }
 
     override fun getEventTypes(): Observable<List<EventTypeRemoteModel>> = service.getEventTypes()
-
-    override fun getEvents(type: Int): Observable<List<EventRemoteModel>> = service.getEvents(type)
-
-    override fun getEvent(id: Int): Observable<EventRemoteModel> = service.getEvent(id)
 
 }
