@@ -3,7 +3,7 @@ package com.bcp.app.data.gateway.mapper
 import com.bcp.app.data.local.model.UserLocalModel
 import com.bcp.app.domain.entity.UserEntity
 
-class UserMapper {
+class UserGatewayMapper {
 
     fun toLocalEntity(userLocalModel: UserLocalModel) =
         UserEntity(

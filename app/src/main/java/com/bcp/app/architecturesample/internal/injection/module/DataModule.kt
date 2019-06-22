@@ -25,36 +25,36 @@ internal class DataModule {
 
     @Provides
     @Singleton
-    internal fun provideEventTypeRemoteDataSource(gitHubService: GitHubService): UserRemoteDataSource {
+    internal fun provideUserRemoteDataSource(gitHubService: GitHubService): UserRemoteDataSource {
         return UserRemoteDataSource(gitHubService)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDatabase(context: Context): UserDatabase {
+    internal fun provideDatabase(context: Context): UserDatabase {
         return UserDatabase.newInstance(context)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDao(userDatabase: UserDatabase): UserDao = userDatabase.eventTypeDao()
+    internal fun provideUserDao(userDatabase: UserDatabase): UserDao = userDatabase.eventTypeDao()
 
     @Provides
     @Singleton
-    internal fun provideEventTypeDiskDataSource(userDao: UserDao): UserLocalDataSource {
+    internal fun provideUserDiskDataSource(userDao: UserDao): UserLocalDataSource {
         return UserLocalDataSource(userDao)
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeLocalToRemoteRepository(userLocalDataSource: UserLocalDataSource,
+    internal fun provideUserLocalToRemoteRepository(userLocalDataSource: UserLocalDataSource,
                                                          userRemoteDataSource: UserRemoteDataSource): UserRepository {
         return UserRepository(userLocalDataSource, userRemoteDataSource, UserMapper())
     }
 
     @Provides
     @Singleton
-    internal fun provideEventTypeRepository(userRepository: UserRepository): UserGateway {
+    internal fun provideUserRepository(userRepository: UserRepository): UserGateway {
         return UserGatewayImpl(userRepository)
     }
 

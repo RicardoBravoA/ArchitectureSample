@@ -2,7 +2,7 @@ package com.bcp.app.data.remote.api
 
 import com.bcp.app.data.BuildConfig
 import com.bcp.app.data.remote.model.UserRemoteModel
-import io.reactivex.Observable
+import io.reactivex.Single
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.logging.HttpLoggingInterceptor.Level.*
@@ -37,6 +37,6 @@ class GitHubApi(baseUrl: String) : GitHubService {
         service = retrofit.create(GitHubService::class.java)
     }
 
-    override fun getUser(): Observable<UserRemoteModel> = service.getUser()
+    override fun getUser(): Single<UserRemoteModel> = service.getUser()
 
 }

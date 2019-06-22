@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/build/generated/source/kapt/debug/com/bcp/app/architecturesample/internal/injection/module/ActivitiesModule_ContributeMainActivity$app_debug.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build/tmp/kapt3/stubs/debug/com/bcp/app/architecturesample/internal/injection/component/AppComponent.java">
           <value>
             <set />
@@ -448,6 +453,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/BaseUseCase.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/MissingUseCaseParameterException.kt">
           <value>
             <set />
@@ -509,6 +519,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/gateway/UserGateway.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/domain/src/main/java/com/bcp/app/domain/interactor/BaseUseCase.kt">
           <value>
             <set />
           </value>
@@ -618,12 +633,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$USER_HOME$/Downloads/Theatre-master/data/src/main/kotlin/com/andremion/data/repository/EventTypeRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$USER_HOME$/Downloads/Theatre-master/presentation/src/main/kotlin/com/andremion/theatre/internal/injection/module/DataModule.kt">
           <value>
             <set />
           </value>
         </entry>
         <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="/fragment.kt">
           <value>
             <set />
           </value>

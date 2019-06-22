@@ -9,9 +9,9 @@ import com.bcp.app.architecturesample.internal.util.BaseAndroidViewModel
 import com.bcp.app.domain.entity.UserEntity
 import com.bcp.app.domain.interactor.UserUseCase
 import io.reactivex.disposables.Disposable
-import io.reactivex.observers.DisposableObserver
+import io.reactivex.observers.DisposableSingleObserver
 
-class UserViewModel(context: Context, private val userUseCase: UserUseCase) :
+class UserViewModel(context: Context, private val useCase: UserUseCase) :
     BaseAndroidViewModel(context.applicationContext as Application) {
 
     val loading = ObservableBoolean()
@@ -23,28 +23,26 @@ class UserViewModel(context: Context, private val userUseCase: UserUseCase) :
     fun loadUser() = addDisposable(getUser())
 
     private fun getUser(): Disposable {
-        return userUseCase.execute()
-            .subscribeWith(object : DisposableObserver<UserEntity>() {
+        return useCase.execute()
+            .subscribeWith(object : DisposableSingleObserver<UserEntity>() {
 
                 override fun onStart() {
                     loading.set(true)
                 }
 
-                override fun onNext(t: UserEntity) {
+                override fun onSuccess(t: UserEntity) {
                     loading.set(false)
                     result.clear()
                     result.add(t)
                     response.set(t.toString())
                 }
 
+
                 override fun onError(t: Throwable) {
                     loading.set(false)
                     error.set(t.localizedMessage ?: t.message ?: "Ocurrió un error")
                 }
 
-                override fun onComplete() {
-                    // no-op
-                }
             })
     }
 }

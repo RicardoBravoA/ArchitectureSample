@@ -28,13 +28,13 @@ internal abstract class MainModule {
         @Provides
         @JvmStatic
         internal fun provideViewModelFactory(context: Context,
-                                             userUseCase: UserUseCase): ViewModelProvider.Factory {
+                                             useCase: UserUseCase): ViewModelProvider.Factory {
             return object : ViewModelProvider.Factory {
                 @Suppress("UNCHECKED_CAST")
                 override fun <T : ViewModel?> create(modelClass: Class<T>): T {
                     return when {
                         modelClass.isAssignableFrom(UserViewModel::class.java) ->
-                            UserViewModel(context, userUseCase) as T
+                            UserViewModel(context, useCase) as T
 
                         else -> throw IllegalArgumentException("Unknown ViewModel class: ${modelClass.name}")
                     }
